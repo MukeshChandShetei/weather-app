@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Weather Companion</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div id="loader" class="loader hidden"></div>
+    <div class="container">
+      <main>
+        <div class="search-bar">
+          <input type="text" id="cityInput" placeholder="Search city..." />
+          <button id="searchBtn">Search</button>
+        </div>
+
+        <p id="error-message" style="color: red; text-align: center"></p>
+        <div class="toggles">
+          <button id="tempToggle" title="Toggle Temperature Unit">
+            🌡️ °C / °F
+          </button>
+          <!-- <button id="themeToggle" title="Toggle Light/Dark Mode">
+            🌙 / ☀️
+          </button> -->
+          <label class="switch" title="Toggle Light/Dark Mode">
+            <input type="checkbox" id="themeToggleSwitch" />
+            <span class="slider"></span>
+          </label>
+          <span id="modeIcon">🌙</span>
+        </div>
+
+        <section id="currentWeather" class="card hidden">
+          <h2 id="cityName"></h2>
+          <p id="temp"></p>
+          <p id="description"></p>
+          <p id="extraInfo"></p>
+        </section>
+
+        <section id="forecast" class="forecast hidden">
+          <!-- Forecast cards will be done here by sing doms
+         -->
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="./js/app.js"></script>
+  </body>
+</html>
